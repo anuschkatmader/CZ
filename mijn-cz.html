@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+<!-- DEMO ENVIRONMENT — NOT AFFILIATED WITH CZ GROEP. For product demonstration purposes only. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>My CZ — Anuschka Mader (demo)</title>
+
+<!-- =====================================================================
+     SCRIPT SLOT — intentionally empty (no cookie banner in this build).
+     ================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<div class="skip-links">
+  <a href="#content">Naar de inhoud</a>
+  <a href="#footer">Naar het einde</a>
+</div>
+
+<p class="demo-note">Demo environment — sample member data. Not affiliated with CZ groep.</p>
+
+<header class="site-header">
+  <div class="brandbar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap header-top">
+    <a class="logo" href="index.html" aria-label="CZ, back to the homepage">
+      <img src="https://www.cz.nl/resources/fe/images/logo.svg" alt="logo cz"
+           width="96" height="40"
+           onerror="this.onerror=null;this.src='assets/img/cz-logo.svg';">
+    </a>
+    <div class="header-tools">
+      <button class="icon-btn nav-toggle" id="navToggle" aria-expanded="false" aria-controls="headerNav" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <a class="btn btn--ghost btn--sm" href="index.html">Back to cz.nl</a>
+      <a class="login-link" href="index.html">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg>
+        <span>Anuschka</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="header-nav" id="headerNav">
+    <div class="wrap nav-row">
+      <div class="audience">
+        <a href="index.html" aria-current="page">Consument</a> &middot;
+        <a href="index.html">Werkgever</a> &middot;
+        <a href="index.html">Zorgaanbieder</a>
+      </div>
+      <ul class="main-nav" id="mainNav">
+        <li><a href="index.html#packages">Health insurance</a></li>
+        <li><a href="index.html">Reimbursements</a></li>
+        <li><a href="index.html#advice">Healthcare advice</a></li>
+        <li><a href="index.html">Payments</a></li>
+        <li><a href="mijn-cz.html" aria-current="page">My CZ</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="account-hero">
+  <div class="wrap">
+    <h1>Good afternoon, Anuschka</h1>
+    <p>Member number 8842 1179 &middot; Zorgbewustpolis, active since 1 January 2019</p>
+  </div>
+</div>
+
+<main id="content">
+<div class="wrap account-layout">
+
+  <!-- SIDEBAR -->
+  <nav class="account-nav" id="accountNav" role="tablist" aria-label="My CZ sections">
+    <button role="tab" data-panel="overview" aria-selected="true">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1Z"/></svg>
+      Overview
+    </button>
+    <button role="tab" data-panel="policy" aria-selected="false">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 19.5 6v6c0 4.3-3.1 7.6-7.5 8.6C7.6 19.6 4.5 16.3 4.5 12V6Z"/><path d="m9 12 2.2 2.2L15.4 10"/></svg>
+      My policy
+    </button>
+    <button role="tab" data-panel="claims" aria-selected="false">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6Z"/><path d="M14 3v4.5H19"/><path d="M9.5 13h5M9.5 16.5h3"/></svg>
+      Claims
+    </button>
+    <button role="tab" data-panel="payments" aria-selected="false">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.2"/><path d="M3 10h18M6.5 14.5h3"/></svg>
+      Payments
+    </button>
+    <button role="tab" data-panel="details" aria-selected="false">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.5" r="3.4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+      Personal details
+    </button>
+    <button role="tab" data-panel="family" aria-selected="false">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8.5" r="3.2"/><path d="M3 19.5a6 6 0 0 1 12 0"/><path d="M16.5 6.4a3.2 3.2 0 0 1 0 6.2M17 14.6a6 6 0 0 1 4 4.9"/></svg>
+      Family members
+    </button>
+    <div class="nav-sep" role="presentation"></div>
+    <button role="tab" data-panel="privacy" aria-selected="false">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="9.5" rx="2"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"/></svg>
+      Privacy &amp; preferences
+    </button>
+  </nav>
+
+  <!-- PANELS -->
+  <div>
+
+    <!-- OVERVIEW -->
+    <section class="panel is-active" id="panel-overview" role="tabpanel" aria-label="Overview">
+      <h2>Overview</h2>
+
+      <div class="card policy-card">
+        <h3>CZ Zorgbewust — basic package</h3>
+        <p style="color:#A0A0A0;margin:0">Aanvullende verzekering Plus &middot; Tandartsverzekering Tandarts &middot; Renews automatically on 1 January 2027</p>
+        <div class="policy-meta">
+          <div><span>Monthly premium</span><strong>&euro;211,30</strong></div>
+          <div><span>Deductible</span><strong>&euro;385 statutory</strong></div>
+          <div><span>Policy number</span><strong>ZV-8842-1179</strong></div>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span>Deductible used this year</span>
+          <strong>&euro;212 of &euro;385</strong>
+          <div class="meter"><i style="width:55%"></i></div>
+        </div>
+        <div class="stat">
+          <span>Physiotherapy sessions left</span>
+          <strong>7 of 12</strong>
+          <div class="meter"><i style="width:58%"></i></div>
+        </div>
+        <div class="stat">
+          <span>Claims in progress</span>
+          <strong>1</strong>
+          <div class="meter"><i style="width:35%"></i></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Recent activity</h3>
+        <p class="card__hint">The last three things that happened on your policy.</p>
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr><th>Date</th><th>Description</th><th>Amount</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2 Sep 2026</td><td>Physiotherapy &mdash; FysioTilburg</td><td>&euro;48.00</td><td><span class="badge badge--wait">In review</span></td></tr>
+              <tr><td>21 Aug 2026</td><td>Dental check-up &mdash; Tandartspraktijk De Bocht</td><td>&euro;62.50</td><td><span class="badge badge--ok">Reimbursed</span></td></tr>
+              <tr><td>14 Aug 2026</td><td>Prescription medication &mdash; Apotheek Centrum</td><td>&euro;18.20</td><td><span class="badge badge--ok">Reimbursed</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Things you might want to arrange</h3>
+        <p class="card__hint">Suggestions based on your policy, not on your health data.</p>
+        <ul class="checklist" style="color:var(--ink)">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cz-red)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+            <span>You have 5 unused physiotherapy sessions that can roll over into 2027.</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cz-red)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+            <span>Your employer's group scheme gives 8% off additional cover &mdash; not yet applied.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- POLICY -->
+    <section class="panel" id="panel-policy" role="tabpanel" aria-label="My policy" hidden>
+      <h2>My policy</h2>
+      <p class="panel__intro">What you are covered for in 2026, and what changes on 1 January.</p>
+
+      <div class="card">
+        <h3>Natura Basisverzekering Zorgbewustpolis</h3>
+        <p class="card__hint">&euro;156,95 per month &middot; deductible &euro;385 &middot; 100% with contracted providers, 70% with non-contracted providers.</p>
+        <div class="table-scroll">
+          <table class="data">
+            <thead><tr><th>Cover</th><th>Reimbursed</th><th>Conditions</th></tr></thead>
+            <tbody>
+              <tr><td>GP care</td><td>100%</td><td>No deductible applies</td></tr>
+              <tr><td>Hospital and specialist care</td><td>100%</td><td>Contracted providers, referral required</td></tr>
+              <tr><td>Prescription medication</td><td>100%</td><td>Preference policy applies</td></tr>
+              <tr><td>Maternity care</td><td>100%</td><td>Personal contribution per hour</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Aanvullende verzekering Plus</h3>
+        <p class="card__hint">&euro;27,35 per month.</p>
+        <div class="table-scroll">
+          <table class="data">
+            <thead><tr><th>Cover</th><th>Reimbursed</th><th>Used this year</th></tr></thead>
+            <tbody>
+              <tr><td>Physiotherapy</td><td>12 sessions (roll over max 5)</td><td>5 sessions</td></tr>
+              <tr><td>Glasses and contacts</td><td>&euro;100</td><td>&euro;0</td></tr>
+              <tr><td>Alternative healthcare</td><td>&euro;350, max &euro;40 per day</td><td>&euro;80</td></tr>
+              <tr><td>Urgent healthcare abroad</td><td>100% worldwide</td><td>Not used</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLAIMS -->
+    <section class="panel" id="panel-claims" role="tabpanel" aria-label="Claims" hidden>
+      <h2>Claims and reimbursements</h2>
+      <p class="panel__intro">Most contracted providers invoice us directly. Anything you paid yourself shows up here.</p>
+
+      <div class="card">
+        <div class="actions-row" style="margin:0 0 1.2rem">
+          <button class="btn btn--primary btn--sm" type="button">Submit a new claim</button>
+          <button class="btn btn--ghost btn--sm" type="button">Download year overview</button>
+        </div>
+        <div class="table-scroll">
+          <table class="data">
+            <thead><tr><th>Submitted</th><th>Provider</th><th>Treatment</th><th>Claimed</th><th>Reimbursed</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>2 Sep 2026</td><td>FysioTilburg</td><td>Physiotherapy session 5</td><td>&euro;48.00</td><td>&mdash;</td><td><span class="badge badge--wait">In review</span></td></tr>
+              <tr><td>21 Aug 2026</td><td>Tandartspraktijk De Bocht</td><td>Check-up and cleaning</td><td>&euro;62.50</td><td>&euro;62.50</td><td><span class="badge badge--ok">Paid 24 Aug</span></td></tr>
+              <tr><td>14 Aug 2026</td><td>Apotheek Centrum</td><td>Prescription medication</td><td>&euro;18.20</td><td>&euro;18.20</td><td><span class="badge badge--ok">Paid 16 Aug</span></td></tr>
+              <tr><td>3 Jul 2026</td><td>Praktijk Vitaal</td><td>Manual therapy</td><td>&euro;54.00</td><td>&euro;40.00</td><td><span class="badge badge--ok">Partly paid</span></td></tr>
+              <tr><td>19 May 2026</td><td>Oogziekenhuis Rotterdam</td><td>Outpatient consultation</td><td>&euro;164.00</td><td>&euro;0.00</td><td><span class="badge badge--off">Deductible</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAYMENTS -->
+    <section class="panel" id="panel-payments" role="tabpanel" aria-label="Payments" hidden>
+      <h2>Payments</h2>
+      <p class="panel__intro">Your premium, your deductible invoices, and how you pay them.</p>
+
+      <div class="stat-row">
+        <div class="stat"><span>Next collection</span><strong>&euro;211,30</strong><div class="meter"><i style="width:100%"></i></div></div>
+        <div class="stat"><span>Open balance</span><strong>&euro;0.00</strong></div>
+        <div class="stat"><span>Payment method</span><strong>Direct debit</strong></div>
+      </div>
+
+      <div class="card">
+        <h3>Direct debit</h3>
+        <p class="card__hint">Collected on the 26th of each month.</p>
+        <div class="field-grid">
+          <div class="field"><label for="iban">IBAN</label><input id="iban" type="text" value="NL24 RABO 0123 4567 89"></div>
+          <div class="field"><label for="holder">Account holder</label><input id="holder" type="text" value="A. Mader"></div>
+        </div>
+        <div class="actions-row"><button class="btn btn--primary btn--sm" type="button">Save payment details</button></div>
+      </div>
+
+      <div class="card">
+        <h3>Invoices</h3>
+        <div class="table-scroll">
+          <table class="data">
+            <thead><tr><th>Period</th><th>Description</th><th>Amount</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Sep 2026</td><td>Monthly premium</td><td>&euro;211,30</td><td><span class="badge badge--wait">Scheduled</span></td></tr>
+              <tr><td>Aug 2026</td><td>Monthly premium</td><td>&euro;211,30</td><td><span class="badge badge--ok">Paid</span></td></tr>
+              <tr><td>Jun 2026</td><td>Deductible &mdash; outpatient consultation</td><td>&euro;164.00</td><td><span class="badge badge--ok">Paid</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERSONAL DETAILS -->
+    <section class="panel" id="panel-details" role="tabpanel" aria-label="Personal details" hidden>
+      <h2>Personal details</h2>
+      <p class="panel__intro">Keep these up to date so we can reach you about your care.</p>
+
+      <div class="card">
+        <h3>Contact details</h3>
+        <div class="field-grid">
+          <div class="field"><label for="fname">First name</label><input id="fname" type="text" value="Anuschka"></div>
+          <div class="field"><label for="lname">Surname</label><input id="lname" type="text" value="Mader"></div>
+          <div class="field"><label for="dob">Date of birth</label><input id="dob" type="text" value="12 March 1987"></div>
+          <div class="field"><label for="bsn">Citizen service number</label><input id="bsn" type="text" value="•••• •• 429"></div>
+          <div class="field"><label for="email">Email</label><input id="email" type="email" value="anuschka.mader@example.nl"></div>
+          <div class="field"><label for="phone">Mobile</label><input id="phone" type="tel" value="+31 6 24 88 11 79"></div>
+        </div>
+        <div class="actions-row"><button class="btn btn--primary btn--sm" type="button">Save changes</button></div>
+      </div>
+
+      <div class="card">
+        <h3>Address</h3>
+        <div class="field-grid">
+          <div class="field"><label for="street">Street and number</label><input id="street" type="text" value="Ringbaan Oost 142"></div>
+          <div class="field"><label for="postcode">Postcode</label><input id="postcode" type="text" value="5013 CD"></div>
+          <div class="field"><label for="city">City</label><input id="city" type="text" value="Tilburg"></div>
+          <div class="field"><label for="country">Country</label><input id="country" type="text" value="Netherlands"></div>
+        </div>
+        <div class="actions-row"><button class="btn btn--primary btn--sm" type="button">Save address</button></div>
+      </div>
+    </section>
+
+    <!-- FAMILY -->
+    <section class="panel" id="panel-family" role="tabpanel" aria-label="Family members" hidden>
+      <h2>Family members</h2>
+      <p class="panel__intro">People insured on your policy. Children under 18 are covered free of charge.</p>
+
+      <div class="card">
+        <div class="table-scroll">
+          <table class="data">
+            <thead><tr><th>Name</th><th>Relationship</th><th>Package</th><th>Deductible used</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Anuschka Mader</td><td>Policyholder</td><td>Zorgbewustpolis + Plus + Tandarts</td><td>&euro;212 of &euro;385</td><td><span class="badge badge--ok">Active</span></td></tr>
+              <tr><td>Joris Mader</td><td>Partner</td><td>Zorgbewustpolis + Plus</td><td>&euro;0 of &euro;385</td><td><span class="badge badge--ok">Active</span></td></tr>
+              <tr><td>Fenna Mader</td><td>Child (9)</td><td>Zorgbewustpolis + Plus</td><td>Not applicable</td><td><span class="badge badge--ok">Free of charge</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="actions-row"><button class="btn btn--ghost btn--sm" type="button">Add a family member</button></div>
+      </div>
+    </section>
+
+    <!-- PRIVACY & PREFERENCES -->
+    <section class="panel" id="panel-privacy" role="tabpanel" aria-label="Privacy and preferences" hidden>
+      <h2>Privacy &amp; preferences</h2>
+      <p class="panel__intro">You decide how CZ contacts you and what we may do with your data. Changes apply across the website, the app, email and our contact centre.</p>
+
+      <!-- CHANNELS -->
+      <div class="card">
+        <h3>How we may contact you</h3>
+        <p class="card__hint">Messages about your policy, invoices and claims are always sent — we are legally required to reach you about those.</p>
+
+        <div class="pref-row">
+          <div class="pref-row__text">
+            <strong>Policy and service messages</strong>
+            <span>Renewals, invoices, claim decisions. Cannot be switched off.</span>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" checked disabled data-purpose-id="service-messages" aria-label="Policy and service messages (always on)">
+            <span class="track"></span>
+          </label>
+        </div>
+
+        <div class="pref-row">
+          <div class="pref-row__text"><strong>Email</strong><span>Health tips, member offers and the CZ newsletter.</span></div>
+          <label class="toggle"><input type="checkbox" checked data-purpose-id="channel-email" aria-label="Email"><span class="track"></span></label>
+        </div>
+
+        <div class="pref-row">
+          <div class="pref-row__text"><strong>Text message</strong><span>Short reminders, for example about an expiring reimbursement.</span></div>
+          <label class="toggle"><input type="checkbox" data-purpose-id="channel-sms" aria-label="Text message"><span class="track"></span></label>
+        </div>
+
+        <div class="pref-row">
+          <div class="pref-row__text"><strong>Push notifications</strong><span>Alerts in the CZ app when a claim is settled.</span></div>
+          <label class="toggle"><input type="checkbox" checked data-purpose-id="channel-push" aria-label="Push notifications"><span class="track"></span></label>
+        </div>
+
+        <div class="pref-row">
+          <div class="pref-row__text"><strong>Telephone</strong><span>Our care advisors may call you about your cover.</span></div>
+          <label class="toggle"><input type="checkbox" data-purpose-id="channel-phone" aria-label="Telephone"><span class="track"></span></label>
+        </div>
+
+        <div class="pref-row">
+          <div class="pref-row__text"><strong>Post</strong><span>Printed policy documents and the annual overview.</span></div>
+          <label class="toggle"><input type="checkbox" data-purpose-id="channel-post" aria-label="Post"><span class="track"></span></label>
+        </div>
+      </div>
+
+      <!-- FREQUENCY (opt-down) -->
+      <div class="card">
+        <h3>How often you hear from us</h3>
+        <p class="card__hint">Rather than switching everything off, you can turn the volume down.</p>
+        <div class="freq" role="radiogroup" aria-label="Contact frequency">
+          <label><input type="radio" name="frequency" value="all" data-purpose-id="frequency"><span><strong>Everything</strong><span>Tips, offers and news as they are published.</span></span></label>
+          <label><input type="radio" name="frequency" value="monthly" checked data-purpose-id="frequency"><span><strong>A monthly summary</strong><span>One email a month with the things that matter most.</span></span></label>
+          <label><input type="radio" name="frequency" value="essential" data-purpose-id="frequency"><span><strong>Only what is essential</strong><span>Nothing but policy and claim messages.</span></span></label>
+        </div>
+      </div>
+
+      <!-- TOPICS -->
+      <div class="card">
+        <h3>What you want to hear about</h3>
+        <p class="card__hint">Pick the subjects that fit your situation. We will leave the rest out.</p>
+        <div class="topics">
+          <label class="topic"><input type="checkbox" checked data-purpose-id="topic-movement"><span>Physiotherapy and movement</span></label>
+          <label class="topic"><input type="checkbox" data-purpose-id="topic-mental"><span>Mental wellbeing</span></label>
+          <label class="topic"><input type="checkbox" checked data-purpose-id="topic-family"><span>Pregnancy and family</span></label>
+          <label class="topic"><input type="checkbox" data-purpose-id="topic-chronic"><span>Living with a chronic condition</span></label>
+          <label class="topic"><input type="checkbox" data-purpose-id="topic-ageing"><span>Healthy ageing</span></label>
+          <label class="topic"><input type="checkbox" checked data-purpose-id="topic-nutrition"><span>Nutrition and prevention</span></label>
+        </div>
+      </div>
+
+      <!-- HEALTH DATA -->
+      <div class="card">
+        <h3>Use of your health data</h3>
+        <p class="card__hint">Health data is sensitive, so we only use it beyond claim handling if you say yes.</p>
+
+        <div class="sensitive-note">
+          <p>These choices are recorded separately with the wording of the notice you were shown, and can be withdrawn at any moment without affecting your cover.</p>
+        </div>
+
+        <div class="pref-row" style="margin-top:1rem">
+          <div class="pref-row__text">
+            <strong>Personal care advice based on my claims</strong>
+            <span>Lets an advisor see, for example, that you are mid-treatment and suggest a contracted clinic with a shorter wait.</span>
+          </div>
+          <label class="toggle"><input type="checkbox" checked data-purpose-id="health-care-advice" aria-label="Personal care advice based on my claims"><span class="track"></span></label>
+        </div>
+
+        <div class="pref-row">
+          <div class="pref-row__text">
+            <strong>Invitations to prevention programmes</strong>
+            <span>We may approach you about programmes such as stop-smoking support or back-pain coaching.</span>
+          </div>
+          <label class="toggle"><input type="checkbox" data-purpose-id="health-prevention" aria-label="Invitations to prevention programmes"><span class="track"></span></label>
+        </div>
+
+        <div class="pref-row">
+          <div class="pref-row__text">
+            <strong>Anonymised use for healthcare research</strong>
+            <span>Aggregated, non-identifiable data helps us see where care in your region falls short.</span>
+          </div>
+          <label class="toggle"><input type="checkbox" checked data-purpose-id="health-research" aria-label="Anonymised use for healthcare research"><span class="track"></span></label>
+        </div>
+      </div>
+
+      <!-- PERSONALISATION -->
+      <div class="card">
+        <h3>Personalisation</h3>
+        <p class="card__hint">How tailored the website, the app and our emails are.</p>
+
+        <div class="pref-row">
+          <div class="pref-row__text"><strong>Tailored content on cz.nl and in the app</strong><span>Show the reimbursements and pages that match your package first.</span></div>
+          <label class="toggle"><input type="checkbox" checked data-purpose-id="personalisation-onsite" aria-label="Tailored content"><span class="track"></span></label>
+        </div>
+
+        <div class="pref-row">
+          <div class="pref-row__text"><strong>Tailored email content</strong><span>Adjust what is in your monthly summary based on what you open.</span></div>
+          <label class="toggle"><input type="checkbox" data-purpose-id="personalisation-email" aria-label="Tailored email content"><span class="track"></span></label>
+        </div>
+
+        <div class="pref-row">
+          <div class="pref-row__text"><strong>Advertising on other platforms</strong><span>Let CZ show you information on social media and partner websites.</span></div>
+          <label class="toggle"><input type="checkbox" data-purpose-id="advertising-offsite" aria-label="Advertising on other platforms"><span class="track"></span></label>
+        </div>
+      </div>
+
+      <div class="actions-row">
+        <button class="btn btn--primary" type="button" id="savePrefs">Save preferences</button>
+        <button class="btn btn--ghost btn--sm" type="button" id="resetPrefs">Reset to last saved</button>
+        <button class="danger-link" type="button" id="withdrawAll">Withdraw all optional consent</button>
+      </div>
+
+      <!-- RIGHTS -->
+      <div class="card" style="margin-top:2rem">
+        <h3>Your rights over your data</h3>
+        <p class="card__hint">Requests are handled within one month. You will get a confirmation by email.</p>
+        <div class="rights">
+          <button type="button" data-request="access"><strong>Request a copy of my data</strong><span>Everything CZ holds, in a readable file.</span></button>
+          <button type="button" data-request="correct"><strong>Correct my data</strong><span>Tell us what is wrong and we will fix it.</span></button>
+          <button type="button" data-request="erase"><strong>Delete my data</strong><span>Subject to the legal retention periods for insurers.</span></button>
+        </div>
+      </div>
+
+      <!-- CONSENT HISTORY -->
+      <div class="card">
+        <h3>Your consent history</h3>
+        <p class="card__hint">Every change is logged with the wording you were shown and where it was captured. New changes appear here as soon as you save.</p>
+        <div class="table-scroll">
+          <table class="data" id="consentHistory">
+            <thead>
+              <tr><th>Date</th><th>Purpose</th><th>Action</th><th>Notice version</th><th>Captured via</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2 Sep 2026</td><td>Push notifications</td><td>Opted in</td><td>NL-PRIV-4.2</td><td>CZ app</td></tr>
+              <tr><td>18 Jun 2026</td><td>Personal care advice based on claims</td><td>Opted in</td><td>NL-PRIV-4.1</td><td>My CZ</td></tr>
+              <tr><td>18 Jun 2026</td><td>Contact frequency</td><td>Changed to monthly summary</td><td>NL-PRIV-4.1</td><td>My CZ</td></tr>
+              <tr><td>4 Feb 2026</td><td>Telephone</td><td>Opted out</td><td>NL-PRIV-4.0</td><td>Contact centre</td></tr>
+              <tr><td>1 Jan 2026</td><td>Email newsletter</td><td>Opted in</td><td>NL-PRIV-4.0</td><td>Sign-up form</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+</div>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite">Preferences saved</div>
+
+<footer class="site-footer" id="footer">
+  <div class="brandbar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap">
+    <div class="footer-legal">
+      <a href="index.html">Accessibility</a>
+      <a href="mijn-cz.html#privacy">Privacy</a>
+      <a href="mijn-cz.html#privacy">Cookies</a>
+      <a href="index.html">Disclaimer</a>
+      <a href="index.html">Sitemap</a>
+      <a href="index.html">Nederlands</a>
+    </div>
+    <div class="footer-sign">
+      <img src="https://www.cz.nl/resources/fe/images/logo.svg" alt="logo"
+           width="86" height="36" onerror="this.onerror=null;this.src='assets/img/cz-logo.svg';">
+      <span class="tagline">Zorg die verder gaat</span>
+      <span class="disclaimer">Demo build — sample data, not affiliated with CZ groep.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script src="assets/js/preferences.js"></script>
+</body>
+</html>
