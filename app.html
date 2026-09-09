@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<!-- DEMO ENVIRONMENT — NOT AFFILIATED WITH CZ GROEP. For product demonstration purposes only. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CZ app — mock-up</title>
+
+<!-- =====================================================================
+     SCRIPT SLOT — intentionally empty (no cookie banner in this build).
+     ================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+<p class="demo-note">Demo environment — sample member data. Not affiliated with CZ groep.</p>
+
+<div class="stage__head">
+  <h1>The CZ app</h1>
+  <p>A clickable mock-up running in a phone frame. Log in, move through the tabs, and open Profile to reach the privacy settings. <a href="index.html">Back to the website</a></p>
+</div>
+
+<div class="brandbar stage-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<div class="phone" id="phone" data-theme="light">
+  <div class="screen-wrap">
+    <div class="island" aria-hidden="true"></div>
+
+    <div class="status-bar">
+      <span>9:41</span>
+      <span class="status-icons" aria-hidden="true">
+        <svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg>
+        <svg width="16" height="11" viewBox="0 0 16 11" fill="currentColor"><path d="M8 10.6 5.6 8.2a3.4 3.4 0 0 1 4.8 0Zm-5-5A8.4 8.4 0 0 1 13 5.6l-1.5 1.5a6.3 6.3 0 0 0-7 0Zm-2.8-2.8a12.4 12.4 0 0 1 15.6 0L14.3 4.3a10.3 10.3 0 0 0-12.6 0Z"/></svg>
+        <svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x=".6" y=".6" width="20" height="10.8" rx="3" stroke="currentColor" stroke-opacity=".45"/><rect x="2.4" y="2.4" width="14" height="7.2" rx="1.8" fill="currentColor"/><path d="M22.2 4.2v3.6a2 2 0 0 0 0-3.6Z" fill="currentColor" fill-opacity=".45"/></svg>
+      </span>
+    </div>
+
+    <div class="brandbar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+    <div class="viewport" id="viewport">
+
+      <!-- ============================ LOGIN ============================ -->
+      <section class="screen is-active" id="screen-login" aria-label="Log in">
+        <div class="login">
+          <div class="login__bg">
+            <img src="https://images.pexels.com/photos/19987955/pexels-photo-19987955.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=760&amp;h=1400&amp;fit=crop" alt="">
+          </div>
+          <div class="login__content">
+            <div class="login__logo">
+              <img src="https://www.cz.nl/resources/fe/images/logo.svg" alt="logo cz" width="86" height="36"
+                   onerror="this.onerror=null;this.src='assets/img/cz-logo.svg';">
+            </div>
+            <h2>Your care, in your pocket</h2>
+            <p>Claims, reimbursements and your remaining deductible — all in one place.</p>
+            <button class="btn-block btn-red" data-go="home">Log in with DigiD</button>
+            <button class="btn-block btn-outline" data-go="home">Log in with your CZ account</button>
+            <p class="login__small">Not a member yet? Calculate your premium</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ HOME ============================= -->
+      <section class="screen" id="screen-home" aria-label="Home">
+        <h2 class="screen__title">Hi Anuschka</h2>
+        <p class="screen__sub">Member 8842 1179 &middot; Tilburg</p>
+
+        <div class="card policy-card">
+          <span class="label">Your policy</span>
+          <h3>Zorgbewustpolis + Plus</h3>
+          <div class="split">
+            <div><span>Premium</span><strong>&euro;211,30</strong></div>
+            <div><span>Deductible</span><strong>&euro;385</strong></div>
+            <div><span>Since</span><strong>2019</strong></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="ring-row">
+            <svg class="ring" width="76" height="76" viewBox="0 0 76 76" role="img" aria-label="55 percent of your deductible used">
+              <circle cx="38" cy="38" r="31" fill="none" stroke="var(--line)" stroke-width="9"/>
+              <circle cx="38" cy="38" r="31" fill="none" stroke="var(--cz-red)" stroke-width="9"
+                      stroke-linecap="round" stroke-dasharray="194.8" stroke-dashoffset="87.7"
+                      transform="rotate(-90 38 38)"/>
+              <text x="38" y="43" text-anchor="middle" font-size="17" fill="currentColor">55%</text>
+            </svg>
+            <div class="progress-copy">
+              <strong>&euro;212 of &euro;385 used</strong>
+              <span>&euro;173 of your deductible is left for 2026.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="action" data-go="claims">
+            <i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5 6 5.5h5l1.4 2h6a1.6 1.6 0 0 1 1.6 1.6v9.3A1.6 1.6 0 0 1 18.4 20H5.6A1.6 1.6 0 0 1 4 18.4Z"/><circle cx="12" cy="13.5" r="3.4"/></svg></i>
+            Submit a claim
+          </button>
+          <button class="action" data-go="cover">
+            <i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg></i>
+            What is covered
+          </button>
+          <button class="action" data-go="chat">
+            <i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12.5a7.5 7.5 0 0 1-10.9 6.7L4 20.5l1.4-4.7A7.5 7.5 0 1 1 20 12.5Z"/></svg></i>
+            Chat with us
+          </button>
+        </div>
+
+        <h3 class="section-label">Recent claims</h3>
+        <div class="list">
+          <button class="row" data-go="claims">
+            <div class="row__body"><strong>FysioTilburg</strong><span>Physiotherapy &middot; 2 Sep</span></div>
+            <div class="row__meta"><strong>&euro;48.00</strong><span class="pill pill--wait">In review</span></div>
+          </button>
+          <button class="row" data-go="claims">
+            <div class="row__body"><strong>Tandartspraktijk De Bocht</strong><span>Check-up &middot; 21 Aug</span></div>
+            <div class="row__meta"><strong>&euro;62.50</strong><span class="pill pill--ok">Paid</span></div>
+          </button>
+          <button class="row" data-go="claims">
+            <div class="row__body"><strong>Apotheek Centrum</strong><span>Medication &middot; 14 Aug</span></div>
+            <div class="row__meta"><strong>&euro;18.20</strong><span class="pill pill--ok">Paid</span></div>
+          </button>
+        </div>
+
+        <h3 class="section-label">Worth knowing</h3>
+        <div class="card">
+          <strong style="display:block;margin-bottom:.25rem">5 physiotherapy sessions left</strong>
+          <span style="color:var(--ink-soft);font-size:.87rem">Unused sessions can roll over into 2027. Arrange it before 31 December.</span>
+        </div>
+      </section>
+
+      <!-- =========================== CLAIMS ============================ -->
+      <section class="screen" id="screen-claims" aria-label="Claims">
+        <h2 class="screen__title">Claims</h2>
+        <p class="screen__sub">Contracted providers bill us directly. Add anything you paid yourself.</p>
+
+        <button class="btn-block btn-red" id="newClaim" style="margin-bottom:14px">Photograph an invoice</button>
+
+        <h3 class="section-label">2026</h3>
+        <div class="list">
+          <div class="row">
+            <div class="row__body"><strong>FysioTilburg</strong><span>Physiotherapy session 5 &middot; 2 Sep</span></div>
+            <div class="row__meta"><strong>&euro;48.00</strong><span class="pill pill--wait">In review</span></div>
+          </div>
+          <div class="row">
+            <div class="row__body"><strong>Tandartspraktijk De Bocht</strong><span>Check-up and cleaning &middot; 21 Aug</span></div>
+            <div class="row__meta"><strong>&euro;62.50</strong><span class="pill pill--ok">Paid</span></div>
+          </div>
+          <div class="row">
+            <div class="row__body"><strong>Apotheek Centrum</strong><span>Prescription &middot; 14 Aug</span></div>
+            <div class="row__meta"><strong>&euro;18.20</strong><span class="pill pill--ok">Paid</span></div>
+          </div>
+          <div class="row">
+            <div class="row__body"><strong>Praktijk Vitaal</strong><span>Manual therapy &middot; 3 Jul</span></div>
+            <div class="row__meta"><strong>&euro;40.00</strong><span class="pill pill--ok">Partly paid</span></div>
+          </div>
+          <div class="row">
+            <div class="row__body"><strong>Oogziekenhuis Rotterdam</strong><span>Consultation &middot; 19 May</span></div>
+            <div class="row__meta"><strong>&euro;0.00</strong><span class="pill pill--off">Deductible</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ COVER ============================ -->
+      <section class="screen" id="screen-cover" aria-label="Cover">
+        <h2 class="screen__title">What is covered</h2>
+        <p class="screen__sub">Your 2026 package, treatment by treatment.</p>
+
+        <div class="search-field" aria-hidden="true">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+          Search a treatment or provider
+        </div>
+
+        <h3 class="section-label">Natura Basisverzekering Zorgbewustpolis</h3>
+        <div class="list">
+          <div class="row"><div class="row__body"><strong>GP care</strong><span>No deductible applies</span></div><div class="row__meta"><strong>100%</strong></div></div>
+          <div class="row"><div class="row__body"><strong>Hospital and specialist care</strong><span>Referral required</span></div><div class="row__meta"><strong>100%</strong></div></div>
+          <div class="row"><div class="row__body"><strong>Prescription medication</strong><span>Preference policy applies</span></div><div class="row__meta"><strong>100%</strong></div></div>
+          <div class="row"><div class="row__body"><strong>Maternity care</strong><span>Personal contribution per hour</span></div><div class="row__meta"><strong>100%</strong></div></div>
+        </div>
+
+        <h3 class="section-label">Aanvullende verzekering Plus</h3>
+        <div class="list">
+          <div class="row"><div class="row__body"><strong>Physiotherapy</strong><span>5 of 12 sessions used</span></div><div class="row__meta"><strong>12&times;</strong></div></div>
+          <div class="row"><div class="row__body"><strong>Glasses and contacts</strong><span>Nothing claimed yet</span></div><div class="row__meta"><strong>&euro;100</strong></div></div>
+          <div class="row"><div class="row__body"><strong>Alternative healthcare</strong><span>&euro;80 used &middot; max &euro;40 per day</span></div><div class="row__meta"><strong>&euro;350</strong></div></div>
+          <div class="row"><div class="row__body"><strong>Urgent healthcare abroad</strong><span>Worldwide</span></div><div class="row__meta"><strong>100%</strong></div></div>
+        </div>
+
+        <h3 class="section-label">Tandartsverzekering Tandarts</h3>
+        <div class="list">
+          <div class="row"><div class="row__body"><strong>Dental treatment</strong><span>&euro;62,50 used &middot; 100% check-ups, 75% other</span></div><div class="row__meta"><strong>&euro;450</strong></div></div>
+          <div class="row"><div class="row__body"><strong>Orthodontics under 18</strong><span>For Fenna</span></div><div class="row__meta"><strong>75%</strong></div></div>
+        </div>
+      </section>
+
+      <!-- ============================= CHAT ============================ -->
+      <section class="screen" id="screen-chat" aria-label="Chat">
+        <h2 class="screen__title">Chat</h2>
+        <p class="screen__sub">Weekdays 8:00&ndash;18:00. Average wait: under two minutes.</p>
+
+        <div class="chat">
+          <div class="bubble bubble--them">Good afternoon Anuschka, you're speaking with Sanne from care advice. How can I help?</div>
+          <p class="chat__meta">Sanne &middot; 14:02</p>
+          <div class="bubble bubble--me">My physiotherapy claim from 2 September still says "in review" — is something missing?</div>
+          <div class="bubble bubble--them">I can see it came in without the treatment code. I've asked FysioTilburg for it, so you don't need to do anything. Expect a decision within three working days.</div>
+          <p class="chat__meta">Sanne &middot; 14:04</p>
+          <div class="bubble bubble--me">Perfect, thank you.</div>
+        </div>
+
+        <div class="search-field" style="margin-top:14px" aria-hidden="true">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          Write a message
+        </div>
+      </section>
+
+      <!-- =========================== PROFILE =========================== -->
+      <section class="screen" id="screen-profile" aria-label="Profile">
+        <h2 class="screen__title">Anuschka Mader</h2>
+        <p class="screen__sub">anuschka.mader@example.nl</p>
+
+        <h3 class="section-label">Your policy</h3>
+        <div class="list">
+          <button class="row" data-go="cover"><div class="row__body"><strong>Package and cover</strong><span>Zorgbewustpolis + Plus + Tandarts</span></div><i class="chev"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg></i></button>
+          <button class="row"><div class="row__body"><strong>Family members</strong><span>Joris and Fenna</span></div><i class="chev"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg></i></button>
+          <button class="row"><div class="row__body"><strong>Payments</strong><span>Direct debit, 26th of the month</span></div><i class="chev"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg></i></button>
+        </div>
+
+        <h3 class="section-label">Settings</h3>
+        <div class="list">
+          <button class="row" data-go="privacy">
+            <div class="row__body"><strong>Privacy &amp; preferences</strong><span>Channels, consent and your data</span></div>
+            <i class="chev"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg></i>
+          </button>
+          <button class="row"><div class="row__body"><strong>Personal details</strong><span>Address, phone and email</span></div><i class="chev"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg></i></button>
+          <button class="row" id="themeRow"><div class="row__body"><strong>Appearance</strong><span id="themeState">Light</span></div><i class="chev"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg></i></button>
+          <button class="row" data-go="login"><div class="row__body"><strong>Log out</strong><span>Back to the login screen</span></div><i class="chev"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg></i></button>
+        </div>
+      </section>
+
+      <!-- ===================== PRIVACY (sub-screen) ==================== -->
+      <section class="screen" id="screen-privacy" aria-label="Privacy and preferences">
+        <div class="subhead">
+          <button class="back" data-go="profile" aria-label="Back to profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m14 5-7 7 7 7"/></svg>
+          </button>
+          <h2>Privacy &amp; preferences</h2>
+        </div>
+
+        <p class="note">Whatever you set here also applies on cz.nl, in your email and at our contact centre.</p>
+
+        <h3 class="section-label">How we may contact you</h3>
+        <div class="list">
+          <div class="pref">
+            <div class="pref__text"><strong>Policy and service messages</strong><span>Always on — we must be able to reach you.</span></div>
+            <label class="sw"><input type="checkbox" checked disabled data-purpose-id="service-messages" aria-label="Policy and service messages"><span class="tr"></span></label>
+          </div>
+          <div class="pref">
+            <div class="pref__text"><strong>Push notifications</strong><span>A ping when a claim is settled.</span></div>
+            <label class="sw"><input type="checkbox" checked data-purpose-id="channel-push" aria-label="Push notifications"><span class="tr"></span></label>
+          </div>
+          <div class="pref">
+            <div class="pref__text"><strong>Email</strong><span>Health tips and member offers.</span></div>
+            <label class="sw"><input type="checkbox" checked data-purpose-id="channel-email" aria-label="Email"><span class="tr"></span></label>
+          </div>
+          <div class="pref">
+            <div class="pref__text"><strong>Text message</strong><span>Short reminders only.</span></div>
+            <label class="sw"><input type="checkbox" data-purpose-id="channel-sms" aria-label="Text message"><span class="tr"></span></label>
+          </div>
+          <div class="pref">
+            <div class="pref__text"><strong>Telephone</strong><span>A care advisor may call you.</span></div>
+            <label class="sw"><input type="checkbox" data-purpose-id="channel-phone" aria-label="Telephone"><span class="tr"></span></label>
+          </div>
+        </div>
+
+        <h3 class="section-label">Use of your health data</h3>
+        <div class="list">
+          <div class="pref">
+            <div class="pref__text"><strong>Personal care advice</strong><span>Let an advisor use your claims to suggest a clinic with a shorter wait.</span></div>
+            <label class="sw"><input type="checkbox" checked data-purpose-id="health-care-advice" aria-label="Personal care advice"><span class="tr"></span></label>
+          </div>
+          <div class="pref">
+            <div class="pref__text"><strong>Prevention programmes</strong><span>Invitations to coaching such as back-pain support.</span></div>
+            <label class="sw"><input type="checkbox" data-purpose-id="health-prevention" aria-label="Prevention programmes"><span class="tr"></span></label>
+          </div>
+          <div class="pref">
+            <div class="pref__text"><strong>Anonymised research</strong><span>Aggregated data on where regional care falls short.</span></div>
+            <label class="sw"><input type="checkbox" checked data-purpose-id="health-research" aria-label="Anonymised research"><span class="tr"></span></label>
+          </div>
+        </div>
+
+        <h3 class="section-label">Personalisation</h3>
+        <div class="list">
+          <div class="pref">
+            <div class="pref__text"><strong>Tailored content in the app</strong><span>Show what matches your package first.</span></div>
+            <label class="sw"><input type="checkbox" checked data-purpose-id="personalisation-onsite" aria-label="Tailored content in the app"><span class="tr"></span></label>
+          </div>
+          <div class="pref">
+            <div class="pref__text"><strong>Advertising on other platforms</strong><span>Information from CZ on social media and partner sites.</span></div>
+            <label class="sw"><input type="checkbox" data-purpose-id="advertising-offsite" aria-label="Advertising on other platforms"><span class="tr"></span></label>
+          </div>
+        </div>
+
+        <h3 class="section-label">Your data</h3>
+        <div class="list">
+          <button class="row" data-request="access"><div class="row__body"><strong>Request a copy of my data</strong><span>Emailed within one month</span></div><i class="chev"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg></i></button>
+          <button class="row" data-request="erase"><div class="row__body"><strong>Delete my data</strong><span>Subject to insurer retention rules</span></div><i class="chev"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg></i></button>
+        </div>
+
+        <div style="margin-top:16px">
+          <button class="btn-block btn-red" id="appSave">Save preferences</button>
+        </div>
+        <p style="text-align:center;margin:12px 0 0">
+          <button type="button" id="appWithdraw" style="background:none;border:0;font:inherit;font-weight:800;font-size:.9rem;color:var(--cz-red);text-decoration:underline;cursor:pointer">Withdraw all optional consent</button>
+        </p>
+      </section>
+
+    </div><!-- /viewport -->
+
+    <div class="app-toast" id="appToast" role="status" aria-live="polite"></div>
+
+    <nav class="tabbar is-hidden" id="tabbar" role="tablist" aria-label="App sections">
+      <button role="tab" data-go="home" aria-selected="true">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1Z"/></svg>
+        Home
+      </button>
+      <button role="tab" data-go="claims" aria-selected="false">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6Z"/><path d="M14 3v4.5H19"/><path d="M9.5 13h5M9.5 16.5h3"/></svg>
+        Claims
+      </button>
+      <button role="tab" data-go="cover" aria-selected="false">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 19.5 6v6c0 4.3-3.1 7.6-7.5 8.6C7.6 19.6 4.5 16.3 4.5 12V6Z"/><path d="m9 12 2.2 2.2L15.4 10"/></svg>
+        Cover
+      </button>
+      <button role="tab" data-go="chat" aria-selected="false">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12.5a7.5 7.5 0 0 1-10.9 6.7L4 20.5l1.4-4.7A7.5 7.5 0 1 1 20 12.5Z"/></svg>
+        Chat
+      </button>
+      <button role="tab" data-go="profile" aria-selected="false">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.5" r="3.4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+        Profile
+      </button>
+    </nav>
+
+    <div class="home-indicator" aria-hidden="true"></div>
+  </div>
+</div>
+
+<div class="stage__controls">
+  <button type="button" id="toggleTheme">Switch to dark mode</button>
+  <button type="button" id="goPrivacy">Jump to privacy settings</button>
+  <button type="button" id="goLogin">Back to login</button>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
