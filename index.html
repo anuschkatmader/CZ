@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<!-- DEMO ENVIRONMENT — NOT AFFILIATED WITH CZ GROEP. For product demonstration purposes only. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#000000">
+<title>CZ healthcare insurance: health insurance in the Netherlands — demo</title>
+<meta name="description" content="Demo replica of the CZ consumer website. Not affiliated with CZ groep.">
+
+<!-- =====================================================================
+     SCRIPT SLOT — intentionally empty. No cookie banner in this build.
+     ================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<div class="skip-links">
+  <a href="#content">Naar de inhoud</a>
+  <a href="#footer">Naar het einde</a>
+</div>
+
+<p class="demo-note">Demo environment — a visual mock-up for a product demonstration. Not affiliated with CZ groep.</p>
+
+<header class="site-header">
+  <div class="brandbar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap header-top">
+    <!-- Official CZ logo, loaded from cz.nl. Falls back to a local wordmark. -->
+    <a class="logo" href="index.html" aria-label="CZ, back to the homepage">
+      <img src="https://www.cz.nl/resources/fe/images/logo.svg" alt="logo cz"
+           width="96" height="40"
+           onerror="this.onerror=null;this.src='assets/img/cz-logo.svg';">
+    </a>
+
+    <div class="header-tools">
+      <button class="icon-btn nav-toggle" id="navToggle" aria-expanded="false" aria-controls="headerNav" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="index.html#packages">Calculate your premium</a>
+      <a class="login-link" href="mijn-cz.html">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg>
+        <span>My CZ</span>
+      </a>
+      <button class="icon-btn" id="searchToggle" aria-expanded="false" aria-controls="searchDrawer" aria-label="Zoeken">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="header-nav" id="headerNav">
+    <div class="wrap nav-row">
+      <div class="audience">
+        <a href="index.html" aria-current="page">Consument</a> &middot;
+        <a href="index.html">Werkgever</a> &middot;
+        <a href="index.html">Zorgaanbieder</a>
+      </div>
+
+      <ul class="main-nav" id="mainNav">
+        <li>
+          <button type="button" aria-expanded="false" aria-controls="mega-insurance">
+            Health insurance
+            <svg class="caret" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 9 7 7 7-7"/></svg>
+          </button>
+          <div class="mega" id="mega-insurance">
+            <ul>
+              <li><a href="index.html#packages">All insurance packages</a></li>
+              <li><a href="index.html#packages">General insurance</a></li>
+              <li><a href="index.html#packages">Additional insurance</a></li>
+              <li><a href="index.html#packages">Dental insurance</a></li>
+              <li><a href="mijn-cz.html#policy">My health insurance (behind login)</a></li>
+              <li><a href="index.html#packages">Calculate your premium</a></li>
+            </ul>
+            <ul>
+              <li><a href="index.html#group">Group health insurance</a></li>
+              <li><a href="index.html">CZdirect health insurance</a></li>
+              <li><a href="index.html">Healthcare abroad</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button type="button" aria-expanded="false" aria-controls="mega-reimbursements">
+            Reimbursements
+            <svg class="caret" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 9 7 7 7-7"/></svg>
+          </button>
+          <div class="mega" id="mega-reimbursements">
+            <ul>
+              <li><a href="index.html">Planned healthcare abroad</a></li>
+              <li><a href="index.html">Physiotherapy</a></li>
+              <li><a href="index.html">Mental healthcare</a></li>
+            </ul>
+            <ul>
+              <li><a href="index.html">Pregnancy and delivery</a></li>
+              <li><a href="index.html">All reimbursements</a></li>
+              <li><a href="index.html">Terms and conditions</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="index.html#advice">Healthcare advice</a></li>
+        <li><a href="index.html">Payments</a></li>
+        <li><a href="index.html#faq">Customer service</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="search-drawer" id="searchDrawer">
+    <div class="wrap">
+      <form role="search" onsubmit="return false;">
+        <label class="visually-hidden" for="siteSearch">Search</label>
+        <input id="siteSearch" type="search" placeholder="Search reimbursements, providers, forms…">
+        <button class="btn btn--primary" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<main id="content">
+
+  <!-- BANNER -->
+  <div class="banner">
+    <img src="https://images.pexels.com/photos/20363852/pexels-photo-20363852.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280&amp;h=360&amp;fit=crop"
+         alt="Two people walking along a sunlit path through a pine forest" width="1280" height="360">
+  </div>
+
+  <section class="intro">
+    <div class="wrap intro__grid">
+      <div>
+        <h1>Stay confidently covered with CZ in 2026</h1>
+        <p>Want to check your premium for 2026? Or see exactly what's included in your coverage? It's quick and easy in the CZ app or in My CZ.</p>
+        <div class="intro__cta">
+          <a class="btn btn--primary" href="mijn-cz.html">View your health insurance</a>
+          <a class="btn btn--ghost" href="index.html#packages">Calculate your premium</a>
+        </div>
+      </div>
+      <ul class="usp">
+        <li>
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          <span><strong>Top service</strong> — submit claims fast in the app and always get personal service</span>
+        </li>
+        <li>
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          <span><strong>Generous reimbursements</strong> — for exactly the healthcare you need</span>
+        </li>
+        <li>
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          <span><strong>Over 20 benefits</strong> — from a discount on gym membership to a free skin check</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- THREE LINK CARDS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head"><h2>Health insurance at CZ</h2></div>
+      <div class="quicklinks">
+
+        <article class="quick">
+          <div class="quick__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 3 12 2.5-8 1.8 4H21"/></svg>
+          </div>
+          <h3>Still some physiotherapy left?</h3>
+          <p>Roll over up to 5 unused physiotherapy sessions.</p>
+          <p><a class="link-arrow" href="index.html#faq">See how it works
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></p>
+        </article>
+
+        <article class="quick">
+          <div class="quick__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          </div>
+          <h3>Looking for a healthcare provider?</h3>
+          <p>Are you looking for a healthcare provider close to your home? The 'Zorgvinder' shows you all the options.</p>
+          <p><a class="link-arrow" href="index.html#advice">Visit the 'Zorgvinder'
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></p>
+        </article>
+
+        <article class="quick">
+          <div class="quick__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12.5 12.6 20.4a2 2 0 0 1-2.8 0l-6.2-6.2a2 2 0 0 1-.6-1.4V4.6A1.6 1.6 0 0 1 4.6 3h8.2a2 2 0 0 1 1.4.6l6.3 6.3a1.8 1.8 0 0 1 0 2.6Z"/><circle cx="7.8" cy="7.8" r="1.4"/></svg>
+          </div>
+          <h3>Special offers &amp; discounts</h3>
+          <p>As a CZ customer, you get extra benefits. Like a discount on the gym or your new glasses.</p>
+          <p><a class="link-arrow" href="index.html#advice">Take a look at all the offers
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="section section--alt" id="packages">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>CZ health insurance 2026</h2>
+        <p>Would you rather choose your own healthcare providers, or do you always visit a contracted one? Your wishes determine which general insurance fits you best.</p>
+      </div>
+
+      <div class="packages">
+
+        <article class="pkg">
+          <h3>Natura Basisverzekering Zorgbewustpolis</h3>
+          <div class="pkg__price"><strong>&euro;156,95</strong><span>per month</span></div>
+          <p class="pkg__deductible">with a deductible of &euro;385</p>
+          <ul>
+            <li><b>100%</b><span>reimbursement with healthcare providers contracted by CZ</span></li>
+            <li><b>70%</b><span>of your bill with non-contracted providers, up to 70% of the contracted rate</span></li>
+            <li><b>+&euro;885</b><span>option of increasing the deductible</span></li>
+          </ul>
+          <div class="pkg__actions">
+            <a class="btn btn--primary" href="index.html#switch">Choose Zorgbewustpolis</a>
+            <a class="link-arrow" href="index.html#faq" style="justify-content:center">Read more about Zorgbewustpolis</a>
+          </div>
+        </article>
+
+        <article class="pkg pkg--popular">
+          <span class="pkg__flag">Most popular</span>
+          <h3>Natura Basisverzekering Zorg-op-maatpolis</h3>
+          <div class="pkg__price"><strong>&euro;159,99</strong><span>per month</span></div>
+          <p class="pkg__deductible">with a deductible of &euro;385</p>
+          <ul>
+            <li><b>100%</b><span>reimbursement with healthcare providers contracted by CZ</span></li>
+            <li><b>75%</b><span>of your bill with non-contracted providers, up to 75% of the contracted rate</span></li>
+            <li><b>5&times;</b><span>choice of five voluntary deductibles</span></li>
+          </ul>
+          <div class="pkg__actions">
+            <a class="btn btn--primary" href="index.html#switch">Choose Zorg-op-maatpolis</a>
+            <a class="link-arrow" href="index.html#faq" style="justify-content:center">Read more about Zorg-op-maatpolis</a>
+          </div>
+        </article>
+
+        <article class="pkg">
+          <h3>Combinatie Basisverzekering Zorgvariatiepolis</h3>
+          <div class="pkg__price"><strong>&euro;177,50</strong><span>per month</span></div>
+          <p class="pkg__deductible">with a deductible of &euro;385</p>
+          <ul>
+            <li><b>100%</b><span>with contracted providers, and with non-contracted providers up to the market rate</span></li>
+            <li><b>85%</b><span>for non-contracted district nursing or mental healthcare</span></li>
+            <li><b>5&times;</b><span>choice of five voluntary deductibles</span></li>
+          </ul>
+          <div class="pkg__actions">
+            <a class="btn btn--primary" href="index.html#switch">Choose Zorgvariatiepolis</a>
+            <a class="link-arrow" href="index.html#faq" style="justify-content:center">Read more about Zorgvariatiepolis</a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="pkg-note">Additional insurance runs from Start (&euro;2,15) through Basis, Plus, Top, Jongeren and 50+ (&euro;49,95). Dental cover is available as Tandarts (&euro;27,00, &euro;450 per year) or Uitgebreide Tandarts (&euro;48,40, &euro;1.150 per year).</p>
+    </div>
+  </section>
+
+  <!-- CLUSTER GRID -->
+  <section class="section" id="advice">
+    <div class="wrap">
+      <div class="cluster">
+
+        <div class="cluster__row">
+          <div class="cluster__media">
+            <img src="https://images.pexels.com/photos/5902264/pexels-photo-5902264.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=768&amp;h=432&amp;fit=crop"
+                 alt="Woman with mobile phone" width="768" height="432" loading="lazy">
+          </div>
+          <div class="cluster__body">
+            <h2>Manage all your healthcare matters in the CZ app</h2>
+            <p>From viewing your premium to submitting claims and checking reimbursements. Got a question? Chat with one of our staff, whenever and wherever it suits you.</p>
+            <a class="btn btn--ghost" href="app.html">Discover the CZ app</a>
+          </div>
+        </div>
+
+        <div class="cluster__row" id="group">
+          <div class="cluster__media">
+            <img src="https://images.pexels.com/photos/7659869/pexels-photo-7659869.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=768&amp;h=432&amp;fit=crop"
+                 alt="A woman helping another woman with paperwork" width="768" height="432" loading="lazy">
+          </div>
+          <div class="cluster__body">
+            <h2>Enjoy the benefits of your group insurance</h2>
+            <p>Does your employer offer a group health insurance plan with CZ? Then you can enjoy discounts on additional coverage, higher reimbursements, and much more. Not just for you, but for your family members too.</p>
+            <a class="link-arrow" href="mijn-cz.html">Discover your group benefits
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+
+        <div class="cluster__row">
+          <div class="cluster__media">
+            <img src="https://images.pexels.com/photos/3932687/pexels-photo-3932687.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=768&amp;h=432&amp;fit=crop"
+                 alt="Man with a child on his shoulders on a woodland path" width="768" height="432" loading="lazy">
+          </div>
+          <div class="cluster__body">
+            <h2>Caring is in our nature</h2>
+            <p>We all care for someone. Our family, our neighbors, our loved ones, and ourselves. Because caring is part of who we are. Need a little extra support? We're here to help you move forward.</p>
+            <a class="link-arrow" href="index.html#faq">See how we help
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CZ -->
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="section__head"><h2>Why you should choose CZ</h2></div>
+      <div class="trust">
+        <div><strong>Every hospital</strong><span>With every policy you can go to any hospital in the Netherlands.</span></div>
+        <div><strong>8.2 / 10</strong><span>The rating our customers give us.</span></div>
+        <div><strong>4.1 million</strong><span>Satisfied customers across the CZ group.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY AND SWITCH -->
+  <section class="section" id="switch">
+    <div class="wrap switch-block">
+      <div>
+        <h2>Apply and switch</h2>
+        <p>Switching is very easy. Calculate your premium and immediately take out your health insurance online.</p>
+        <a class="btn btn--primary" href="index.html#packages">Calculate your premium in two minutes</a>
+      </div>
+      <ul class="checklist">
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          <span>Convenient cancellation service</span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          <span>14-day cooling-off period</span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          <span>Children under 18 co-insured for free</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt" id="faq">
+    <div class="wrap">
+      <div class="section__head"><h2>Frequently asked questions about health insurance</h2></div>
+      <div class="faq" id="faq-list">
+
+        <div class="faq__item">
+          <h3 style="margin:0"><button class="faq__q" aria-expanded="true">Until when can I change my health insurance?</button></h3>
+          <div class="faq__a is-open">
+            <p>As a CZ customer, you can submit your changes until 1 January 2026. You can easily do this in My CZ. Your changes will take effect on 1 January 2026. Do you want to switch to CZ? Then cancel your old insurance no later than 31 December 2025. After that, you can switch health insurance until 1 February of the new year.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <h3 style="margin:0"><button class="faq__q" aria-expanded="false">How do I take out a health insurance?</button></h3>
+          <div class="faq__a">
+            <p>View and compare our insurance packages, fill in your personal details, and choose the commencement date. If you take out your health insurance before 1 January, we will cancel your current insurance policy so you don't have to do that yourself.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <h3 style="margin:0"><button class="faq__q" aria-expanded="false">Is a health insurance mandatory?</button></h3>
+          <div class="faq__a">
+            <p>Yes, a general health insurance is mandatory in the Netherlands, also for children under the age of 18. An additional insurance package is not mandatory, so you can decide for yourself whether you want one.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <h3 style="margin:0"><button class="faq__q" aria-expanded="false">Can I choose which hospital I go to for each type of treatment?</button></h3>
+          <div class="faq__a">
+            <p>Yes, you can go to the hospital of your choice under all our general insurance policies. For a small number of specialist treatments you only receive full reimbursement at selected hospitals with extensive experience in that area.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <h3 style="margin:0"><button class="faq__q" aria-expanded="false">Who can I speak to about my personal data?</button></h3>
+          <div class="faq__a">
+            <p>Your communication preferences and consent choices live under <a href="mijn-cz.html#privacy">Privacy &amp; preferences</a> in My CZ. From there you can also request a copy of your data or ask us to delete it.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="footer">
+  <div class="brandbar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Insurance policies</h4>
+        <ul>
+          <li><a href="index.html#packages">Additional insurance packages</a></li>
+          <li><a href="index.html#packages">Dental insurance policies</a></li>
+          <li><a href="index.html#packages">General insurance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reimbursements and conditions</h4>
+        <ul>
+          <li><a href="index.html">CZ package overview 2026</a></li>
+          <li><a href="index.html">Terms and conditions</a></li>
+          <li><a href="index.html">All reimbursements</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Join CZ</h4>
+        <ul>
+          <li><a href="index.html#packages">Compare all our insurances</a></li>
+          <li><a href="index.html#group">Group health insurance</a></li>
+          <li><a href="index.html#packages">Choose health insurance and apply</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="index.html#faq">Call us</a></li>
+          <li><a href="index.html#faq">Send us a letter</a></li>
+          <li><a href="app.html">The CZ app</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <a href="index.html">Accessibility</a>
+      <a href="mijn-cz.html#privacy">Privacy</a>
+      <a href="mijn-cz.html#privacy">Cookies</a>
+      <a href="index.html">Disclaimer</a>
+      <a href="index.html">Sitemap</a>
+      <a href="index.html">Nederlands</a>
+    </div>
+
+    <div class="footer-sign">
+      <img src="https://www.cz.nl/resources/fe/images/logo.svg" alt="logo"
+           width="86" height="36" onerror="this.onerror=null;this.src='assets/img/cz-logo.svg';">
+      <span class="tagline">Zorg die verder gaat</span>
+      <span class="disclaimer">Demo build — not affiliated with CZ groep.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
